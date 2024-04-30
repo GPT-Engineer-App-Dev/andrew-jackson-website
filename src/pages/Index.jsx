@@ -1,15 +1,29 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, VStack, Text, Button, Image } from '@chakra-ui/react';
+import { FaEnvelope, FaBlog, FaUser } from 'react-icons/fa';
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <VStack spacing={8} align="stretch" p={5}>
+      <Box p={5} shadow="md" borderWidth="1px">
+        <Text fontSize="2xl" fontWeight="bold">Andrew Jackson</Text>
+        <Text mt={4}>Welcome to my personal website! Here you can find information about my work, read my blog posts, and get in touch with me.</Text>
+      </Box>
+      <Box p={5} shadow="md" borderWidth="1px">
+        <Text fontSize="2xl" fontWeight="bold"><FaUser /> Bio</Text>
+        <Text mt={4}>[Placeholder for bio]</Text>
+      </Box>
+      <Box p={5} shadow="md" borderWidth="1px">
+        <Text fontSize="2xl" fontWeight="bold"><FaBlog /> Blog</Text>
+        <Text mt={4}>[Placeholder for recent blog posts]</Text>
+        <Button mt={4} leftIcon={<FaBlog />}>Visit Blog</Button>
+      </Box>
+      <Box p={5} shadow="md" borderWidth="1px">
+        <Text fontSize="2xl" fontWeight="bold"><FaEnvelope /> Contact</Text>
+        <Text mt={4}>[Placeholder for contact information]</Text>
+        <Button mt={4} leftIcon={<FaEnvelope />}>Get in Touch</Button>
+      </Box>
+    </VStack>
+  );
 };
 
 export default Index;
